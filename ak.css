@@ -5,7 +5,7 @@
 
 #toc
 {
-	right: 120px;
+	right: 20px;
 	top: 300px;
 	opacity: 1;
 	position: fixed;
@@ -15,14 +15,10 @@
 
 body
 {
-	overflow-y: scroll;
+	overflow-y: visible;
 	height: 2500px;
 }
 
-html
-{
-	overflow-y: scroll;
-}
 
 .active{
 	color: white;
