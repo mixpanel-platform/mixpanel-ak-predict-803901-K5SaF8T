@@ -1,0 +1,22 @@
+#header
+{
+	padding: 5px;
+}
+
+#toc
+{
+	right: 120px;
+	top: 300px;
+	opacity: 1;
+	position: fixed;
+	
+	
+}
+
+
+
+.active{
+	color: white;
+	background-color: rgba(100,100,100,1);
+	/*border-left: thick solid rgba(0,255,0,0.5);*/
+}

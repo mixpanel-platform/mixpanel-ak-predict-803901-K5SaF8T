@@ -1,15 +1,230 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.css">
-    <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
-  </head>
-  <body class="mixpanel-platform-body">
-    <h1>Hello, World!</h1>
-    <script>
-      // Run queries and display results here
-    </script>
-  </body>
-</html>
+<html class="no_touch supports_line_clamp supports_flexbox" lang="en"><head>
+
+ 
+    
+    
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Getting Started | Mixpanel</title>
+   
+    <link href="./gettingStarted_files/rollup-plastic.css" rel="stylesheet" type="text/css">
+    <link href="./gettingStarted_files/getting_started.css" rel="stylesheet" type="text/css">
+    <script src="jquery-1.11.3.min.js"></script>
+     <link href="ak.css" rel="stylesheet" type="text/css">
+
+    
+    <!--[if lt IE 9]>
+    <script src="https://slack.global.ssl.fastly.net/ef0d/js/libs/html5shiv.js"></script>
+    <![endif]-->
+    
+</head>
+<body class="full_bleed">
+
+<!-- JS interactions -->
+<script>
+$(document).ready(function(){
+
+   $("section").mouseenter(function(){
+     var id = $(this).attr('id');
+     $('a').removeClass('active');
+     $("[href=#"+id+"]").addClass('active');
+   });
+
+});
+</script>
+   
+    <div id="page">
+
+
+        <div class="" id="page_contents">
+            <div class="header">
+                <div class="container">
+                    <h1>Getting Started</h1>
+                    <h2>Making Mixpanel work for you</h2>
+                </div>
+            </div>
+            <div id="wrapper">
+            <div class="container" id="content">
+                <section id="sdk">
+                    <h1>Include our SDK</h1>
+                    <p>Integrate with your app or site. (How do I initialize the Mixpanel SDK? Including code box where you can switch between the sets of directions for JS, iOS, Android, and Other)
+View our other libraries. (Don’t see your platform listed? Link to other platforms)
+                    <img src="holder.jpg">
+                    </p>
+                    
+                    <hr>
+                </section>
+                <section id="invite-team">
+                    <h1>Invite your Team</h1>
+                    <p>Utilize your project settings to view important information about your project. (How do I add team members to my project and view my project information?)</p>
+                    <img src="holder.jpg">
+                    
+                    
+                    <p>Some other text <strong>strong text</strong></p>
+                    <hr>
+                </section>
+                <section id="goals">
+                    <h1>Focus on your Goals</h1>
+                    <p>Use an implementation spec to ensure you track the actions that matter to your business. (How do I go about deciding specifically what to track and what not to track?)
+Provide your team with a roadmap of what your analytics will look like. (What is the benefit of / Why should I be using an implementation spec?)</p><img src="holder.jpg">
+<p>[If there was to be a split between the overarching sections, it would be right here.]</p>
+                    <hr>
+
+                </section>
+                <section id="evolve">
+                    <h1>Evolve your Analytics</h1>
+                    <p>Use an implementation spec to ensure you track the actions that matter to your business. (How do I go about deciding specifically what to track and what not to track?)
+Provide your team with a roadmap of what your analytics will look like. (What is the benefit of / Why should I be using an implementation spec?)</p><img src="holder.jpg">
+<p>[If there was to be a split between the overarching sections, it would be right here.]</p>
+                    <hr>
+
+                </section>
+                <section id="track">
+                    <h1>Track Events</h1>
+                    <p>Track user actions within your site or app as events within Mixpanel. (What is an event? Including code box where you switch between a basic track call in JS, iOS, Android, and Other)</p>
+                    <img src="holder.jpg">
+                    
+                    
+                    <hr>
+                </section>
+                <section id="identify">
+                    <h1>Identify your Users</h1>
+                    <p>Track user data within your site or app as people profiles within Mixpanel. (What is a profile? Including code box where you switch between a basic track call in JS, iOS, Android, and Other)
+Ensure the identity of your users remains consistent across all site or app visits. (How do I track a user time and time again? Explains identity management)</p>
+                    <ul>
+                        <li>Click on the up arrow button on the left hand side
+                        of the message box.</li>
+                        <li>Drag and drop your file into a channel.</li>
+                        <li>Take a screengrab, then use Ctrl/Cmd + V to paste
+                        it in.</li>
+                    </ul>
+                    <br>
+                    <p>Posts and Snippets are two types of files team members
+                    can create and share within Slack. To get started with
+                    either of these file types, click on the up arrow next to
+                    the input box.</p>
+                    <ul>
+                        <li>Posts are good for sharing notes and longer pieces
+                        of writing with your team.</li>
+                        <li>Snippets are best for sharing code or recreating a
+                        preformatted block of text.</li>
+                    </ul><img src="holder.jpg">
+                    <hr>
+                </section>
+                <section id="describe">
+                    <h1>Describe with Properties</h1>
+                    <p>Include properties with your events that describe the action which takes place. (How do I best use events in Mixpanel? Includes the value prop of properties/super properties)
+Record properties which will act as targeted triggers to send users. (How do I best use people profiles within Mixpanel? Includes the types of properties that should be tracked)
+Analyze a historical (event properties) and present (people properties) view of your data. (What is the difference between event and people properties and why should I utilize both?)</p><img src="holder.jpg">
+                    <hr>
+                </section>
+                <section id="analyze">
+                    <h1>Analyze in Reports</h1>
+                    <p>Analyze the count and type of events being fired. (What is Segmentation?)
+Measure the conversion of users towards a specific goal. (What are Funnels?)
+Calculate the loyalty of your customers over time. (What is Retention?)</p>
+                    
+                    <img src="holder.jpg">
+                    <hr>
+                </section>
+
+                                <section id="notify">
+                    <h1>Send a Notification</h1>
+                    <p>Engage users across important communications channels. (What types of notifications can I send with Mixpanel?)
+Send targeted notifications based on the traits of your users. (How do I target my users?)
+Measure user engagement based on the receipt of a notification. (How do I measure the effectiveness of my campaigns?)</p>
+                    
+                    <img src="holder.jpg">
+                    <hr>
+                </section>
+
+                                <section id="experiment">
+                    <h1>Experiment with A/B Testing</h1>
+                    <p>Iterate on your design and test product changes with customers. (What is A/B Testing?)</p>
+                    
+                    <img src="holder.jpg">
+                    <hr>
+                </section>
+
+                                <section id="debug">
+                    <h1>Debug Instantly</h1>
+                    <p>Debug directly with instant access to analytics data. (What is Live View?)
+Keep your production and development data separate. (How do I set up a dev and production project for my data?)</p>
+                    
+                    <img src="holder.jpg">
+                    <hr>
+                </section>
+
+                                <section id="more">
+                    <h1>Read More</h1>
+                    <p>Links to important resources. (Examples: Dev docs, Common Qs, Mixpanel U, etc.)
+</p>
+                    
+                    <img src="holder.jpg">
+                    <hr>
+                </section>
+
+                <section id="help">
+                    <h1>Get Help</h1>
+                    <p>How to find the right contact for assistance. (What is Support? Potential for including other role types since each customer has a different POC at MP)</p>
+                    
+                    <img src="holder.jpg">
+                    <hr>
+                </section>
+                </div>
+
+                
+            </div>
+        
+
+    </div>
+</div>
+
+    <div class="nav" id="toc">
+        <ul>
+            <li>
+                <a class="active" href="#sdk">Include our SDK</a>
+            </li>
+            <li>
+                <a class="" href="#invite-team">Invite your Team</a>
+            </li>
+            <li>
+                <a class="" href="#goals">Focus on your goals</a>
+            </li>
+            <li>
+                <a class="" href="#evolve">Evolve your Analytics</a>
+            </li>
+            <li>---</li>
+            <li>
+                <a class="" href="#track">Track Events</a>
+            </li>
+            <li>
+                <a class="" href="#identify">Identify your Users</a>
+            </li>
+            <li>
+                <a class="" href="#describe">Describe with Properties</a>
+            </li>
+            <li>
+                <a class="" href="#analyze">Analyze in Reports</a>
+            </li>
+            <li>
+                <a class="" href="#notify">Send a Notification</a>
+            </li>
+            <li>
+                <a class="" href="#expirment">Experiment with A/B Testing</a>
+            </li>
+            <li>
+                <a class="" href="#debug">Debug Instantly</a>
+            </li>
+            <li>
+                <a class="" href="#more">Read More</a>
+            </li>
+            <li>
+                <a class="" href="#help">Get Help</a>
+            </li>
+
+        </ul>
+    
+    </div>
+
+</body></html>
