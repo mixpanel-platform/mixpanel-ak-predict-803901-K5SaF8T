@@ -16,6 +16,7 @@
 body
 {
 	overflow-y: scroll;
+	height: 2500px;
 }
 
 html
