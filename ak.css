@@ -9,9 +9,20 @@
 	top: 300px;
 	opacity: 1;
 	position: fixed;
-	
-	
+
 }
+
+#page
+{
+	background: #f0f2f6;
+}
+
+#content h1
+{
+	color: #747d95;
+}	
+	
+
 
 body
 {
@@ -22,6 +33,6 @@ body
 
 .active{
 	color: white;
-	background-color: rgba(100,100,100,1);
+	background: #829ac0;
 	/*border-left: thick solid rgba(0,255,0,0.5);*/
 }
