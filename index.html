@@ -26,14 +26,18 @@
 <!-- JS interactions -->
 <script>
 $(document).ready(function(){
-
+    //for scroll bar
    $("section").mouseenter(function(){
      var id = $(this).attr('id');
      $('a').removeClass('active');
      $("[href=#"+id+"]").addClass('active');
    });
+   //so all links open in a new window
+$('a[href^="https://"]').attr('target','_blank');
 
 });
+
+
 </script>
    
     <div id="page">
@@ -50,34 +54,71 @@ $(document).ready(function(){
             <div class="container" id="content">
                 <section id="sdk">
                     <h1>Include our SDK</h1>
-                    <p>Integrate with your app or site. (How do I initialize the Mixpanel SDK? Including code box where you can switch between the sets of directions for JS, iOS, Android, and Other)
-View our other libraries. (Don’t see your platform listed? Link to other platforms)
-                    <img src="holder.jpg">
+                    <p>To start tracking with the Mixpanel <b>JavaScript</b> library, you'll paste our <a href="https://mixpanel.com/help/reference/javascript">initialization code</a> into all the pages in your side of inside the <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code></code> tags.</p>
+
+                    <p>To start tracking client-side with <b>Android</b> or <b>iOS</b> libraries, see our brief tutorials on installing client-side SDKs documentation for <a href="https://mixpanel.com/help/reference/ios#installing">iOS</a> and/or <a href="https://mixpanel.com/help/reference/android#quick-start">Android</a></p>
+
+                    <p>If you're using server-side libraries, such as python, java, node, ruby, or HTTP (to name a few) we also have <a href="https://mixpanel.com/help/reference/python">implementation documentation</a> on these libraries.</p>
+                    <p>Regardless of which library you choose, you will need to get your <b>mixpanel project token</b>. The token uniquely identifies your mixpanel project, and is critical to properly send Mixpanel event. Your projects token is located in the settings menu and can be accessed like this:</p>
+                    <p>
+                    <img class="gif" src="gifs/token.gif">
                     </p>
+                    <p><i>Note: it is a best practice to create a mixpanel project for <b>development</b> and one for <b>production</b>. The only difference between the two would be the token.</i></p>
+
                     
                     <hr>
                 </section>
                 <section id="invite-team">
                     <h1>Invite your Team</h1>
-                    <p>Utilize your project settings to view important information about your project. (How do I add team members to my project and view my project information?)</p>
-                    <img src="holder.jpg">
+                    <p>Mixpanel breaks down data silos by making analytics accessible to users of all types. Therefore, inviting your team to Mixpanel a critical step to moving towards data-driven decisions.</p>
+
+                    <p>Membership controls are implemented on a per-project basis. To add people to your team, find the ‘invite team members button in the bottom left corner of the screen, and add users by entering their email and pressing invite:</p>
+
                     
-                    
-                    <p>Some other text <strong>strong text</strong></p>
+                    <p><img class="gif" src="gifs/team.gif"></p>
+
+                  
+
+
+
+<p><i>Note that users with an existing Mixpanel account will not get an email; they will simply be added to that project</i></p>
+
+<p>Mixpanel projects you belong to are indicated in the top left drop-down of the application:</p>
+
+<p><img class="still" src="stills/projects.png"></p>
+
                     <hr>
                 </section>
                 <section id="goals">
                     <h1>Focus on your Goals</h1>
-                    <p>Use an implementation spec to ensure you track the actions that matter to your business. (How do I go about deciding specifically what to track and what not to track?)
-Provide your team with a roadmap of what your analytics will look like. (What is the benefit of / Why should I be using an implementation spec?)</p><img src="holder.jpg">
-<p>[If there was to be a split between the overarching sections, it would be right here.]</p>
+                    <p>Mixpanel is an <b>event</b>-driven analytics platform. Unlike other analytics tools, <b>You</b> will determine the actions (events) and details (properties) which are important inside your application. Describing data in the form of events and properties is what allows us to ask complex questions of data:</p>
+
+                    <p><img class="still" src="stills/event-annotated.png" ></p>
+
+
+<p><b>Events</b> are the primary actions that a user will take in your application... examples of events would be: logging in, adding a friend, leaving a comment, making a sandwich, adding an item to cart, making in-app purchase, checking out etc... Events are the <i>top level</i> object in mixpanel, and they will be the genesis for most of your analysis</p>
+
+<p><b>Properties</b> are what <i>describe</i> those events and make them more meaningful. Properties are <i>essential</i> to every good mixpanel implementation. Examples of properties would be: User Type, $ in Cart, Page Name, # of times opened, or 'type of bread' if you like the example above.</p>
+
+<p>Here's a pretty simple and straighforward visualization that may help you better understand the structure of events and properties in mixpanel:</p>
+
+<p><img class="still" src="stills/imp-spec.png"></p>
+
+<p>Because the relationsip of events and properties can be complex, we <b>highly</b> reccomend authoring a document which specifically details the events and properties in your application you'd like to track.</p>
+
+<p>From our experience, a good implementation spec looks like this:</p>
+
+<p><img class="still" src="stills/ideal-spec.png"></p>
+
+<br><br><br>
+<p><b>[If there was to be a split between the overarching sections, it would be right here.]</b></p>
                     <hr>
 
                 </section>
                 <section id="evolve">
                     <h1>Evolve your Analytics</h1>
                     <p>Use an implementation spec to ensure you track the actions that matter to your business. (How do I go about deciding specifically what to track and what not to track?)
-Provide your team with a roadmap of what your analytics will look like. (What is the benefit of / Why should I be using an implementation spec?)</p><img src="holder.jpg">
+Provide your team with a roadmap of what your analytics will look like. (What is the benefit of / Why should I be using an implementation spec?)</p><img class="gif" src="holder.jpg">
 <p>[If there was to be a split between the overarching sections, it would be right here.]</p>
                     <hr>
 
@@ -85,7 +126,7 @@ Provide your team with a roadmap of what your analytics will look like. (What is
                 <section id="track">
                     <h1>Track Events</h1>
                     <p>Track user actions within your site or app as events within Mixpanel. (What is an event? Including code box where you switch between a basic track call in JS, iOS, Android, and Other)</p>
-                    <img src="holder.jpg">
+                    <img class="gif" src="holder.jpg">
                     
                     
                     <hr>
@@ -111,14 +152,14 @@ Ensure the identity of your users remains consistent across all site or app visi
                         of writing with your team.</li>
                         <li>Snippets are best for sharing code or recreating a
                         preformatted block of text.</li>
-                    </ul><img src="holder.jpg">
+                    </ul><img class="gif" src="holder.jpg">
                     <hr>
                 </section>
                 <section id="describe">
                     <h1>Describe with Properties</h1>
                     <p>Include properties with your events that describe the action which takes place. (How do I best use events in Mixpanel? Includes the value prop of properties/super properties)
 Record properties which will act as targeted triggers to send users. (How do I best use people profiles within Mixpanel? Includes the types of properties that should be tracked)
-Analyze a historical (event properties) and present (people properties) view of your data. (What is the difference between event and people properties and why should I utilize both?)</p><img src="holder.jpg">
+Analyze a historical (event properties) and present (people properties) view of your data. (What is the difference between event and people properties and why should I utilize both?)</p><img class="gif" src="holder.jpg">
                     <hr>
                 </section>
                 <section id="analyze">
@@ -127,7 +168,7 @@ Analyze a historical (event properties) and present (people properties) view of 
 Measure the conversion of users towards a specific goal. (What are Funnels?)
 Calculate the loyalty of your customers over time. (What is Retention?)</p>
                     
-                    <img src="holder.jpg">
+                    <img class="gif" src="holder.jpg">
                     <hr>
                 </section>
 
@@ -137,7 +178,7 @@ Calculate the loyalty of your customers over time. (What is Retention?)</p>
 Send targeted notifications based on the traits of your users. (How do I target my users?)
 Measure user engagement based on the receipt of a notification. (How do I measure the effectiveness of my campaigns?)</p>
                     
-                    <img src="holder.jpg">
+                    <img class="gif" src="holder.jpg">
                     <hr>
                 </section>
 
@@ -145,7 +186,7 @@ Measure user engagement based on the receipt of a notification. (How do I measur
                     <h1>Experiment with A/B Testing</h1>
                     <p>Iterate on your design and test product changes with customers. (What is A/B Testing?)</p>
                     
-                    <img src="holder.jpg">
+                    <img class="gif" src="holder.jpg">
                     <hr>
                 </section>
 
@@ -154,7 +195,7 @@ Measure user engagement based on the receipt of a notification. (How do I measur
                     <p>Debug directly with instant access to analytics data. (What is Live View?)
 Keep your production and development data separate. (How do I set up a dev and production project for my data?)</p>
                     
-                    <img src="holder.jpg">
+                    <img class="gif" src="holder.jpg">
                     <hr>
                 </section>
 
@@ -163,7 +204,7 @@ Keep your production and development data separate. (How do I set up a dev and p
                     <p>Links to important resources. (Examples: Dev docs, Common Qs, Mixpanel U, etc.)
 </p>
                     
-                    <img src="holder.jpg">
+                    <img class="gif" src="holder.jpg">
                     <hr>
                 </section>
 
@@ -171,7 +212,7 @@ Keep your production and development data separate. (How do I set up a dev and p
                     <h1>Get Help</h1>
                     <p>How to find the right contact for assistance. (What is Support? Potential for including other role types since each customer has a different POC at MP)</p>
                     
-                    <img src="holder.jpg">
+                    <img class="gif" src="holder.jpg">
                     <hr>
                 </section>
                 </div>
@@ -181,6 +222,8 @@ Keep your production and development data separate. (How do I set up a dev and p
         
 
     </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 
     <div class="nav" id="toc">
